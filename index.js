@@ -11,22 +11,22 @@ function start() {
             name: "choice"
         }
     ]).then(function (answers) {
-        if (answers.choice == "Add department") {
+        if (answers.choice == "Add Department") {
             addDepartment();
         }
         if (answers.choice == "Add Role") {
             addRole();
         }
-        if (answers.choice == "Add Employees") {
+        if (answers.choice == "Add Employee") {
             addEmployee();
         }
-        if (answers.choice == "View departments") {
+        if (answers.choice == "View Departments") {
             viewDepartments();
         }
-        if (answers.choice == "View roles") {
+        if (answers.choice == "View Roles") {
             viewRoles();
         }
-        if (answers.choice == "View employees") {
+        if (answers.choice == "View Employees") {
             viewEmployees();
         }
         if (answers.choice == "Update Employee Roles") {
@@ -76,12 +76,12 @@ function addRole() {
                 {
                     type: "input",
                     name: 'salary',
-                    message: 'Enter the role salary: ',
+                    message: "Enter the role's salary: ",
                 },
                 {
                     type: 'list',
                     choices: departments,
-                    message: "Enter the department name:",
+                    message: "Enter the department name: ",
                     name: 'departmentName',
                 }
             ]).then(function (answers) {
@@ -146,7 +146,7 @@ function addEmployee() {
                             type: 'list',
                             choices: managers,
                             name: "managerId",
-                            message: "Please select the manager:"
+                            message: "Please select the manager: "
                         }
                     ]).then(function (answers) {
                         var roleId = answers.roleName.split('.')[0];
